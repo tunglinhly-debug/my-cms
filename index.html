@@ -46,7 +46,7 @@ fetch(API)
             html += `<img src="${item.media}"><p>${item.content}</p>`;
         }
         if(item.type === "video"){
-            html += `<iframe src="${item.media}" title="YouTube video player" width="560" height="315" frameborder="0"></iframe>`;
+            html += `<video width="500" height="300" controls><source src="${item.media}" type="video/mp4">^_^</video>`;
         }
         if(item.type === "link"){
             html += `&nbsp;<a href="${item.link}"target="_blank">Open link</a>`;
