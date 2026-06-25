@@ -41,19 +41,19 @@ fetch(API)
         html += `<small>${item.date}</small>`;
         if(item.type === "text"){
             html += `<p>${item.content}</p>`;
-            html += `<a href="detail.html?id=${item.id}">Xem chi tiết</a>`;
+            html += `<p><a href="detail.html?id=${item.id}">Xem chi tiết</a></p>`;
         }
         if(item.type === "image"){
             html += `<img src="${item.media}"><p>${item.content}</p>`;
-            html += `<a href="detail.html?id=${item.id}">Xem chi tiết</a>`;
+            html += `<p><a href="detail.html?id=${item.id}">Xem chi tiết</a></p>`;
         }
         if(item.type === "video"){
             html += `<iframe src="${item.media}" frameborder="0" allowfullscreen></iframe>`;
-            html += `<a href="detail.html?id=${item.id}">Xem chi tiết</a>`;
+            html += `<p><a href="detail.html?id=${item.id}">Xem chi tiết</a></p>`;
         }
         if(item.type === "link"){
             html += `<a href="${item.link}"target="_blank">Open link</a>`;
-            html += `<a href="detail.html?id=${item.id}">Xem chi tiết</a>`;
+            html += `<p><a href="detail.html?id=${item.id}">Xem chi tiết</a></p>`;
         }
         html += `</div>`;
     });
