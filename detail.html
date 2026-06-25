@@ -27,26 +27,23 @@ iframe{
 </style>
 </head>
 <body>
-<h1>My Content</h1>
 <div id="app"></div>
 <script>
 const API = "https://script.google.com/macros/s/AKfycbyhnsI16x9MLhiYHTcUe_Z_-aeC4F1h2KqLdzOHnc6V7dmSTzX7XPIQpnRy0TlR1DTe/exec";
-fetch(API)
-.then(res => res.json())
-.then(data => {
-    let html = "";
-    data.reverse().item(id) {
-        html += `<div class="card">`;
-        html += `<h2>${item.title}</h2>`;
-        html += `<small>${item.date}</small>`;
-        html += `<small>${item.summary}</small>`;
-        html += `<small>${item.content}</small>`;
-        html += `<small>${item.media}</small>`;
-        html += `<small>${item.link}</small>`;
-        html += `</div>`;
-    });
-    document.getElementById("app")
-        .innerHTML = html;
+fetch(API).then(res => res.json())
+    .then(data => {
+        let html = "";
+        data.reverse().item(id) {
+            html += `<div class="card">`;
+            html += `<h2>${item.title}</h2>`;
+            html += `<small>${item.date}</small>`;
+            html += `<small>${item.summary}</small>`;
+            html += `<small>${item.content}</small>`;
+            html += `<small>${item.media}</small>`;
+            html += `<small>${item.link}</small>`;
+            html += `</div>`;
+        };
+        document.getElementById("app").innerHTML = html;
 });
 </script>
 </body>
