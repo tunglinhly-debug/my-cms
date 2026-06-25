@@ -35,7 +35,7 @@ fetch(API)
 .then(res => res.json())
 .then(data => {
     let html = "";
-    data.reverse().forEach(item => {
+    data.reverse().item(id) {
         html += `<div class="card">`;
         html += `<h2>${item.title}</h2>`;
         html += `<small>${item.date}</small>`;
