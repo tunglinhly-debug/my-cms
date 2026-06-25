@@ -40,9 +40,7 @@ fetch(API)
         html += `<h2>${item.title}</h2>`;
         html += `<small>${item.date}</small>`;
         if(item.type === "text"){
-            html += `
-            <p>${item.content}</p>
-            `;
+            html += `<p>${item.content}</p>`;
         }
         if(item.type === "image"){
             html += `
@@ -51,21 +49,10 @@ fetch(API)
             `;
         }
         if(item.type === "video"){
-            html += `
-            <iframe
-            src="${item.media}"
-            frameborder="0"
-            allowfullscreen>
-            </iframe>
-            `;
+            html += `<iframe src="${item.media}" frameborder="0" allowfullscreen></iframe>`;
         }
         if(item.type === "link"){
-            html += `
-            <a href="${item.link}"
-            target="_blank">
-            Open link
-            </a>
-            `;
+            html += `<a href="${item.link}" target="_blank">Open link</a>`;
         }
         html += `</div>`;
     });
