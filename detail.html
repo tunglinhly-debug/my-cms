@@ -1,50 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
 <meta charset="utf-8">
-<title>My CMS</title>
-<style>
-body{
-    font-family:Arial;
-    max-width:1000px;
-    margin:auto;
-    padding:20px;
-}
-.card{
-    border:1px solid #ddd;
-    border-radius:10px;
-    padding:15px;
-    margin-bottom:20px;
-}
-img{
-    width:100%;
-    border-radius:10px;
-}
-iframe{
-    width:100%;
-    height:500px;
-}
-</style>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chi tiết</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="app"></div>
-<script>
-const API = "https://script.google.com/macros/s/AKfycbyhnsI16x9MLhiYHTcUe_Z_-aeC4F1h2KqLdzOHnc6V7dmSTzX7XPIQpnRy0TlR1DTe/exec";
-fetch(API).then(res => res.json())
-    .then(data => {
-        let html = "";
-        data.reverse() {
-            html += `<div class="card" id=${item.id}>`;
-            html += `<h2>${item.title}</h2>`;
-            html += `<small>${item.date}</small>`;
-            html += `<small>${item.summary}</small>`;
-            html += `<small>${item.content}</small>`;
-            html += `<small>${item.media}</small>`;
-            html += `<small>${item.link}</small>`;
-            html += `</div>`;
-        };
-        document.getElementById("app").innerHTML = html;
-});
-</script>
+<header id="header"></header>
+<main id="detail"></main>
+<footer id="footer"></footer>
+<script src="detail.js"></script>
 </body>
 </html>
