@@ -59,6 +59,19 @@ fetch(API)
     });
     document.getElementById("app").innerHTML = html;
 });
+
+fetch(API)
+.then(r => r.json())
+.then(data => {
+    const config = data.config;
+    document.getElementById("header").innerHTML = `<div class="header">
+                                                      <img src="${config.Logo}" class="logo">
+                                                      <h1>${config.SiteName}</h1>
+                                                      <p>${config.HeroText}</p>
+                                                    </div>`;
+    });
+    
+document.getElementById("footer").innerHTML = `<div class="footer">${config.Footer}</div>`;
 </script>
 </body>
 </html>
