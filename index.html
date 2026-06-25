@@ -28,6 +28,7 @@ iframe{
 </head>
 <body>
 <h1>My Content</h1>
+<!--
 <button data-cat="All">Tất cả</button>
 <button data-cat="Blog">Blog</button>
 <button data-cat="Album">Album</button>
@@ -37,6 +38,7 @@ iframe{
 <script>
     item.category === selectedCategory
 </script>
+
 <input id="searchBox" placeholder="Tìm kiếm...">
 <script>
     searchBox.addEventListener("input", () => {
@@ -51,12 +53,12 @@ iframe{
     );
 });
 </script>
+
 <img src="a.jpg">
 <img src="b.jpg">
 <img src="c.jpg">
 <script>
-    const images =
-item.media.split("|");
+    const images = item.media.split("|");
 </script>
 <audio controls>
     <source src="link.mp3" type="audio/mpeg">
@@ -66,6 +68,7 @@ item.media.split("|");
 <script>
     html += `<a href="detail.html?id=${item.id}">Xem chi tiết</a>`;
 </script>
+-->
 <div id="app"></div>
 <script>
 const API = "https://script.google.com/macros/s/AKfycbyhnsI16x9MLhiYHTcUe_Z_-aeC4F1h2KqLdzOHnc6V7dmSTzX7XPIQpnRy0TlR1DTe/exec";
