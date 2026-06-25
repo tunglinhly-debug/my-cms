@@ -43,13 +43,15 @@ fetch(API)
             html += `<p>${item.content}</p>`;
         }
         if(item.type === "image"){
-            html += `<img src="${item.media}"><p>${item.content}</p>`;
+            html += `<p><img src="${item.media}"></p>
+                     <p>${item.content}</p>`;
         }
         if(item.type === "video"){
-            html += `<video width="500" height="300" controls><source src="${item.media}" type="video/mp4">^_^</video>`;
+            html += `<video width="500" height="300" controls>
+                     <source src="${item.media}" type="video/mp4">^_^</video>`;
         }
         if(item.type === "link"){
-            html += `&nbsp;<a href="${item.link}"target="_blank">Open link</a>`;
+            html += `<p><a href="${item.link}"target="_blank">Open link</a></p>`;
         }
         // html += `<p><a href="detail.html?id=${item.id}">Xem chi tiết</a></p>`;
         html += `</div>`;
