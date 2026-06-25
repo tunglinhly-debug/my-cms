@@ -51,7 +51,7 @@ fetch(API)
         if(item.type === "link"){
             html += `&nbsp;<a href="${item.link}"target="_blank">Open link</a>`;
         }
-        html += `<p><a href="detail.html?id=${item.id}">Xem chi tiết</a></p>`;
+        // html += `<p><a href="detail.html?id=${item.id}">Xem chi tiết</a></p>`;
         html += `</div>`;
     });
     document.getElementById("app").innerHTML = html;
