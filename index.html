@@ -45,7 +45,7 @@ iframe{
 <div id="app"></div>
 <div id="footer"></div>
 <script>
-const API = "https://script.google.com/macros/s/AKfycbyhnsI16x9MLhiYHTcUe_Z_-aeC4F1h2KqLdzOHnc6V7dmSTzX7XPIQpnRy0TlR1DTe/exec";
+const API = "https://script.google.com/macros/s/AKfycbyTHy6nK2jxF5fPRkM7eC7R5i3WP2BtYAqvBKglVpAC0qMXEDAcgV9wJxld_0tUGf2W/exec";
 fetch(API)
 .then(res => res.json())
 .then(data => {
@@ -74,7 +74,6 @@ fetch(API)
     document.getElementById("app").innerHTML = html;
 });
 
-fetch(API)
 .then(r => r.json())
 .then(data => {
     const config = data.config;
