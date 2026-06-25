@@ -39,21 +39,10 @@ fetch(API)
         html += `<div class="card">`;
         html += `<h2>${item.title}</h2>`;
         html += `<small>${item.date}</small>`;
-        if(item.type === "text"){
-            html += `<p>${item.content}</p>`;
-        }
-        if(item.type === "image"){
-            html += `
-            <img src="${item.media}">
-            <p>${item.content}</p>
-            `;
-        }
-        if(item.type === "video"){
-            html += `<iframe src="${item.media}" frameborder="0" allowfullscreen></iframe>`;
-        }
-        if(item.type === "link"){
-            html += `<a href="${item.link}" target="_blank">Open link</a>`;
-        }
+        html += `<small>${item.summary}</small>`;
+        html += `<small>${item.content}</small>`;
+        html += `<small>${item.media}</small>`;
+        html += `<small>${item.link}</small>`;
         html += `</div>`;
     });
     document.getElementById("app")
